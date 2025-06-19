@@ -1,0 +1,266 @@
+/* ------------------------------------ */
+/* 1. Estilos Globales y Reseteo Básico */
+/* ------------------------------------ */
+body {
+    font-family: 'Montserrat', sans-serif; /* APLICADO DIRECTAMENTE AL BODY */
+    margin: 0; /* Elimina el margen predeterminado del navegador */
+    padding: 0; /* Elimina el padding predeterminado */
+    line-height: 1.6; /* Espaciado entre líneas para mejor lectura */
+    color: #333; /* Color de texto principal gris oscuro */
+    background-color: #f9f9f9; /* Fondo muy claro, casi blanco */
+    -webkit-font-smoothing: antialiased; /* Suaviza las fuentes en navegadores WebKit */
+    scroll-behavior: smooth; /* Desplazamiento suave al hacer clic en enlaces internos */
+}
+
+a {
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    color: #555; /* Color de enlace ligeramente oscuro */
+    transition: color 0.3s ease; /* Suaviza el cambio de color al pasar el mouse */
+}
+
+a:hover {
+    color: #000; /* Color negro al pasar el mouse sobre los enlaces */
+}
+
+/* Reseteo básico para eliminar márgenes predeterminados en algunos elementos */
+h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* -------------------------- */
+/* 2. Estilos del Encabezado (Header) */
+/* -------------------------- */
+header {
+    background-color: #fff; /* Fondo blanco para el encabezado */
+    padding: 20px 0; /* Espaciado interno superior e inferior */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Sombra sutil en la parte inferior */
+    position: fixed; /* Fija el encabezado en la parte superior */
+    width: 100%; /* Ocupa todo el ancho */
+    top: 0; /* Pégalo al top */
+    left: 0; /* Pégalo a la izquierda */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+nav {
+    display: flex; /* Para alinear elementos en fila */
+    justify-content: space-between; /* Espacia el logo y el menú */
+    align-items: center; /* Centra verticalmente los elementos */
+    max-width: 1000px; /* Ancho máximo del contenido de navegación */
+    margin: 0 auto; /* Centra la navegación horizontalmente */
+    padding: 0 20px; /* Espaciado a los lados */
+}
+
+.logo {
+    font-size: 1.8em; /* Tamaño grande para el logo/nombre */
+    font-weight: bold; /* Negrita */
+    color: #333; /* Color oscuro */
+    letter-spacing: -0.5px; /* Ajuste ligero del espaciado entre letras */
+}
+
+nav ul {
+    list-style: none; /* Quita los puntos de la lista */
+    display: flex; /* Pone los elementos de la lista en fila */
+}
+
+nav ul li {
+    margin-left: 30px; /* Espaciado entre los elementos del menú */
+}
+
+nav ul li a {
+    font-size: 1.1em; /* Tamaño de fuente para los enlaces del menú */
+    font-weight: 500; /* Peso de la fuente */
+    color: #555; /* Color de enlace */
+}
+
+nav ul li a:hover {
+    color: #000; /* Color negro al pasar el mouse */
+}
+
+/* ------------------------------ */
+/* 3. Estilos de las Secciones Principales */
+/* ------------------------------ */
+main {
+    padding-top: 100px; /* Deja espacio para el header fijo */
+}
+
+section {
+    padding: 80px 20px; /* Mucho espacio interno para un look minimalista */
+    max-width: 1000px; /* Ancho máximo para el contenido de la sección */
+    margin: 0 auto; /* Centra la sección horizontalmente */
+    text-align: center; /* Centra el texto dentro de la sección */
+}
+
+section:nth-of-type(even) { /* Estilo para secciones pares (alterna el fondo) */
+    background-color: #f0f0f0; /* Un gris muy claro para diferenciar */
+}
+
+/* Estilos específicos para el Hero/Sección principal */
+.hero {
+    min-height: 70vh; /* Altura mínima de la vista para que ocupe gran parte de la pantalla */
+    display: flex; /* Para centrar el contenido */
+    flex-direction: column; /* Apila el contenido verticalmente */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    background-color: #fff; /* Fondo blanco */
+}
+
+.hero h1 {
+    font-size: 3.5em; /* Tamaño grande para el título principal */
+    color: #222; /* Color casi negro */
+    margin-bottom: 10px; /* Espacio debajo del título */
+    letter-spacing: -1px; /* Ajuste del espaciado */
+}
+
+.hero h2 {
+    font-size: 1.8em; /* Tamaño para el subtítulo */
+    color: #666; /* Gris más claro */
+    font-weight: normal; /* No negrita */
+    margin-bottom: 20px; /* Espacio debajo del subtítulo */
+}
+
+.hero p {
+    font-size: 1.2em;
+    color: #777;
+    max-width: 600px;
+    margin-bottom: 40px;
+}
+
+
+/* Estilos para otros títulos de sección */
+section h2 {
+    font-size: 2.5em;
+    color: #222;
+    margin-bottom: 40px;
+    position: relative; /* Para la línea decorativa */
+    display: inline-block; /* Para que la línea se ajuste al texto */
+}
+
+section h2::after { /* Una línea sutil debajo de los títulos de sección */
+    content: '';
+    display: block;
+    width: 60px;
+    height: 2px;
+    background-color: #bbb;
+    margin: 20px auto 0; /* Centra la línea */
+}
+
+/* Estilos para párrafos */
+section p {
+    font-size: 1.1em;
+    color: #555;
+    max-width: 700px; /* Ancho máximo para que los párrafos no sean demasiado largos */
+    margin: 0 auto 20px auto; /* Centra el párrafo y añade espacio abajo */
+}
+
+/* ------------------------------ */
+/* 4. Estilos de la Galería Destacada */
+/* ------------------------------ */
+#galeria-destacada {
+    background-color: #f9f9f9; /* Fondo claro */
+    padding: 80px 20px; /* Consistencia con otras secciones */
+}
+
+.galeria-grid {
+    display: grid; /* Usa CSS Grid para la disposición en cuadrícula */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Columnas responsivas */
+    gap: 30px; /* Espacio entre los elementos de la cuadrícula */
+    margin-top: 50px; /* Espacio arriba del grid */
+}
+
+.galeria-item {
+    background-color: #fff; /* Fondo blanco para cada item */
+    border-radius: 8px; /* Bordes ligeramente redondeados */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08); /* Sombra más pronunciada */
+    overflow: hidden; /* Asegura que la imagen no se salga de los bordes redondeados */
+    text-align: center; /* Centra el texto */
+    padding-bottom: 20px; /* Espacio debajo del texto */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave al pasar el mouse */
+}
+
+.galeria-item:hover {
+    transform: translateY(-5px); /* Pequeño levantamiento al pasar el mouse */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12); /* Sombra más intensa al pasar el mouse */
+}
+
+.galeria-item img {
+    width: 100%; /* La imagen ocupa todo el ancho de su contenedor */
+    height: 250px; /* Altura fija para las imágenes */
+    object-fit: cover; /* Recorta la imagen para que llene el espacio sin distorsionarse */
+    display: block; /* Elimina espacio extra debajo de la imagen */
+    border-bottom: 1px solid #eee; /* Línea sutil debajo de la imagen */
+    margin-bottom: 20px; /* Espacio entre imagen y texto */
+}
+
+.galeria-item h3 {
+    font-size: 1.4em;
+    color: #333;
+    margin-bottom: 10px;
+    padding: 0 15px; /* Padding para el título */
+}
+
+.galeria-item p {
+    font-size: 1em;
+    color: #666;
+    padding: 0 15px; /* Padding para el párrafo */
+    margin-bottom: 0; /* Quita el margen inferior del p */
+}
+
+/* ---------------------- */
+/* 5. Estilos del Pie de Página (Footer) */
+/* ---------------------- */
+footer {
+    background-color: #333; /* Fondo oscuro para el pie de página */
+    color: #fff; /* Texto blanco */
+    text-align: center; /* Centra el texto */
+    padding: 30px 20px; /* Espaciado interno */
+    font-size: 0.9em; /* Tamaño de fuente más pequeño */
+}
+
+footer p {
+    margin: 0;
+}
+
+/* ---------------------- */
+/* 6. Responsividad Básica */
+/* ---------------------- */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Apila el logo y el menú en pantallas pequeñas */
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .logo {
+        margin-bottom: 15px; /* Espacio debajo del logo */
+    }
+
+    nav ul {
+        flex-wrap: wrap; /* Permite que los elementos del menú salten de línea */
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0 15px 10px; /* Espaciado ajustado para pantallas pequeñas */
+    }
+
+    .hero h1 {
+        font-size: 2.5em; /* Ajusta el tamaño del título principal */
+    }
+
+    .hero h2 {
+        font-size: 1.3em; /* Ajusta el tamaño del subtítulo */
+    }
+
+    section {
+        padding: 50px 15px; /* Menos padding en móviles */
+    }
+
+    section h2 {
+        font-size: 2em; /* Ajusta el tamaño de los títulos de sección */
+    }
+
+    .galeria-grid {
+        grid-template-columns: 1fr; /* Una sola columna en pantallas muy pequeñas */
+    }
+}
